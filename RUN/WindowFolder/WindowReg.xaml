@@ -1,0 +1,55 @@
+﻿<Window x:Class="RUN.WindowFolder.WindowReg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:local="clr-namespace:RUN"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="780" Width="850" 
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}" AllowsTransparency="True" WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}"
+                         Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+        <materialDesign:DialogHost CloseOnClickAway="True" x:Name="DialogHost">
+            <StackPanel>
+
+                <Image Source="/ImageFolder/logo.png" Margin="0 60 0 5" Height="120"/>
+
+                <Label Content="Регистрация" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0 20 0 0" FontSize="28" FontWeight="Bold" Grid.ColumnSpan="4"/>
+
+                <TextBox x:Name="TbLogin" Grid.Row="3" Margin="-380 30 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите логин" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+                <TextBox x:Name="TbSurname" Grid.Row="3" Margin="380 -58 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите фамилию" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+                <Image Source="/ImageFolder/show.png"  Height="30" Margin="-140 30 0 -88" x:Name="ShowPassword" MouseLeftButtonDown="ShowPassword_Click" Width="30" Panel.ZIndex="1"/>
+
+                <Image Source="/ImageFolder/hide.png"  Height="30" Margin="-140 30 0 -88" x:Name="HidePassword" MouseLeftButtonDown="HidePassword_Click" Width="30" Panel.ZIndex="1" Visibility="Hidden"/>
+
+                <TextBox x:Name="TbPassword" Margin="-380 30 0 -88" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите пароль" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Visibility="Hidden"/>
+
+                <PasswordBox x:Name="PbPassword" Margin="-380 30 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите пароль" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Cursor="Arrow"/>
+
+                <TextBox x:Name="TbName" Grid.Row="3" Margin="380 -58 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите имя" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+                <PasswordBox x:Name="PbRepeatPassword" Margin="-380 30 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите пароль повторно" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+
+                <TextBox x:Name="TbPatronymic" Grid.Row="3" Margin="380 -58 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите отчество(если есть)" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Cursor="Arrow"/>
+
+                <TextBox x:Name="TbPhone" Grid.Row="3" Margin="-380 30 0 0" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введите номер телефона" 
+                         BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Text="+7 999 999 99 99"/>
+
+                <Image x:Name="IOut" Source="/ImageFolder/back.png" MouseLeftButtonDown="IOut_Click" Height="60" Margin="210 30 0 0"/>
+                <Image x:Name="IReg" Source="/ImageFolder/ok.png" MouseLeftButtonDown="IReg_Click" Height="60" Margin="-210 -60 0 0"/>
+            </StackPanel>
+        </materialDesign:DialogHost>
+    </materialDesign:Card>
+</Window>
